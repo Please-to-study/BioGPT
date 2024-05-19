@@ -5,9 +5,9 @@ import { UpdateOpenAiDto } from './dto/update-open-ai.dto';
 import axios from 'axios';
 
 // openai 服务器key
-// const OPENAI_API_KEY = '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';
+// const KEY = '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';
 // 代理服务器key
-const OPENAI_API_KEY = 'fk225711-H4PD3osgL5gypa3duuVMBN3Xym4ekLUA';
+const KEY = 'fk225711-H4PD3osgL5gypa3duuVMBN3Xym4ekLUA';
 
 // 代理服务器url
 const OPENAI_URL = 'https://oa.api2d.net/v1/chat/completions';
@@ -20,7 +20,7 @@ export class OpenAiService {
   constructor() {
     // 初始化 OpenAI 客户端
     this.openaiClient = new OpenAI({
-      apiKey: OPENAI_API_KEY,
+      apiKey: KEY,
     });
   }
 
@@ -67,7 +67,7 @@ export class OpenAiService {
         method: 'post',
         url: OPENAI_URL,
         headers: {
-          'Authorization': 'Bearer ' + OPENAI_API_KEY,
+          'Authorization': 'Bearer ' + KEY,
           // 'User-Agent': 'Apifox/1.0.0 (https://apifox.com)',
           'Content-Type': 'application/json'
         },
